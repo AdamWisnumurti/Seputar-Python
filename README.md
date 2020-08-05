@@ -1,2 +1,2 @@
 # Python-DS
-Hasil-hasil dari latihan yang saya pernah selesaikan dengan python
+Hasil dari latihan yang saya pernah selesaikan dengan python
