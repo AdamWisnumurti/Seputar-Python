@@ -1,2 +1,2 @@
-# Python-DS
-Hasil dari latihan yang saya pernah selesaikan dengan python
+# Seputar Python
+Hasil dari sedikit contoh yang pernah saya selesaikan dengan python
