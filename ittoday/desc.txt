@@ -1,0 +1,73 @@
+ATT (attitude information)	
+DesRoll		The pilot’s desired roll angle in degrees (roll left is negative, right is positive)
+Roll		The vehicle’s actual roll in degrees (roll left is negative, right is positive)
+DesPitch	The pilot’s desired pitch angle in degrees (pitch forward is negative, pitch back is positive)
+Pitch		The vehicle’s actual pitch angle in degrees (pitch forward is negative, pitch back is positive)
+DesYaw		The pilot’s desired heading in degrees with 0 = north
+Yaw		The vehicle’s actual heading in degrees with 0 = north
+ErrRP		The average size of the roll/pitch error estimate (values between 0 and 1)
+ErrYaw		The average size of the yaw error estimate (values between 0 and 1)
+	
+MAG/COMPASS (raw compass, offset and compassmot compensation values)	
+Field	Description
+MagX, MagY. MagZ	Raw magnetic field values for x, y and z axis
+OfsX, OfsY, OfsZ	Raw magnetic offsets (will only change if COMPASS_LEARN parameter is 1)
+MOfsX, MOfsY, MOfsZ	Compassmot compensation for throttle or current
+	
+CTUN (Control, Throttle and altitude information)	
+FIELD	DESCRIPTION
+TimeUS	Time stamp for messages (can be ignored)
+ThI	The pilot’s throttle in as a number from 0 to 1000
+ABst	Angle Boost: throttle increase (from 0 ~ 1000) as a result of the copter leaning over (automatically added to all pilot and autopilot throttle to reduce altitude loss while leaning)
+ThO	Final throttle output sent to the motors (from 0 ~ 1000). Normally equal to ThrI+ABst while in stabilize mode.
+ThH	?
+DAlt	The Desired Altitude while in AltHold, Loiter, RTL or Auto flight modes. It is influenced by EKF origin, which in 3.5.X is corrected by GPS altitude. This is behaviour is turned off in 3.6.X and can be turned on with EKF_OGN_HGT_MASK.
+Alt	The current EKF Altitude
+BAlt	Barometer Altitude: The altitude above ground according to the barometer
+DSAlt	Not used? (Only visible of Sonar is available)
+SAlt	Sonar Altitude: the altitude above ground according to the sonar (Only visible of Sonar is available)
+TAlt	Not used?
+CRate	Climb Rate: Accelerometer + baro estimate in cm/s
+DCRate	Desired Climb Rate in cm/s
+CRate	Climb Rate in cm/s
+	
+GPA: (Global Position Accuracy)	
+FIELD	DESCRIPTION
+VDop	Vertical dilution of precision, a unitless measure of precisionhttps://en.wikipedia.org/wiki/Dilution_of_precision
+HAcc	Horizontal Accuracy as reported by the GPS module, in meters
+VAcc	Vertical Accuracy as reported by the GPS module, in meters
+SAcc	Speed accuracy as reported by the GPS, in m/s/s
+VV	Flag to indicate if the GPS is reporting vertical velocity
+	0 No vertical velocity data 1 GPS has vertical velocity data
+SMS	The autopilot time in milliseconds that the accuracy/GPS position data is associated with.
+Delta	The time between when the previous GPS message and the current GPS message was parsed by the autopilot, in milliseconds
+	
+GPS	
+FIELD	DESCRIPTION
+Status		0 = no GPS, 1 = GPS but no fix, 2 = GPS with 2D fix, 3 = GPS with 3D fix
+Time		The GPS reported time since epoch in milliseconds
+NSats		The number of satellites current being used
+HDop		A measure of gps precision (1.5 is good, >2.0 is not so good)https://en.wikipedia.org/wiki/Dilution_of_precision
+Lat		Lattitude according to the GPS
+Lng		Longitude according to the GPS
+RelAlt		Accelerometer + Baro altitude in meters
+Alt		GPS reported altitude (not used by the flight controller)
+SPD		Horizontal ground speed in m/s
+GCrs		Ground course in degrees (0 = north)
+	
+IMU (accelerometer and gyro information)	
+FIELD	DESCRIPTION
+GyrX, GyrY, GyrZ	The raw gyro rotation rates in degrees/second
+AccX, AccY, AccZ	The raw accelerometer values in m/s/s
+	
+RCOUT (pwm output to individual RC outputs)	
+RC1, RC2, etc : 	pwm command sent from flight controller to the esc/motor/RC output	
+	
+ID	
+id			Data point id
+DeviceID		Quadcopter device (device 1 or device 2)
+PatternID		Route used in experiment
+ExpID			ID of Experiment
+
+
+Yang dicari adalah Lng dan Lat yang bernilai Nan

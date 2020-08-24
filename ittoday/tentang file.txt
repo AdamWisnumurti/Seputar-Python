@@ -1,0 +1,33 @@
+Quadcopter Flight Path Identification
+
+	Hazim sedang mengerjakan project kuliah yaitu merakit dua buah quadcopter.
+Quadcopter adalah helikopter multirotor yang diangkat dan didorong oleh empat rotor. 
+Quadcopter yang dirakit Hazim diatur untuk terbang dengan dua tipe rute lintasan
+secara otomatis(autopilot) serta dapat dipantau melalui remote control ataupun komputer.
+Pada quadcopter tersebut terdapat beberapa sensor, diantaranya adalah
+global positioning system (GPS), global position accuracy (GPA),
+inertial measurement unit (IMU), dan magnetometer (Kompas).
+
+	Setelah tahap perakitan selesai, Hazim akan melakukan uji coba
+penerbangan pada quadcopter rakitannya untuk diambil data nya.
+Melalui kedua quadcopter tersebut, dilakukan uji coba terbang dengan
+mengikuti koordinat longitude dan latitude pada GPS quadcopter
+sesuai dengan rute yang telah diatur sebelumnya.
+Tugas anda yaitu prediksi data koordinat (longitude,latitude) 
+deret waktu dari posisi ke-X hingga posisi terakhir untuk setiap percobaan.
+
+Data diambil dari lokasi yang sama dan dengan dua device quadcopter drone yang berbeda.
+
+
+
+Deskripsi FIle
+
+QuadData.csv Data rekam hasil percobaan, untuk data dengan nilai koordinat
+	(Longitude,Latitude) bernilai NaN akan menjadi data test yang harus diprediksi.
+
+description.xlsx Deskripsi dari setiap fitur pada dataset.
+
+sampleSubmission.csv Contoh submisi yang valid, file berisi nilai prediksi
+	dari dataset QuadData yang memiliki nilai koordinat NaN.
+
+	Hasil akan dievaluasi menggunakan metric **Mean Haversine Distance** 
